@@ -288,16 +288,16 @@ export default function Home() {
 
   return (
     <main className="overflow-x-clip pb-20 md:pb-0">
-      <section className="relative isolate overflow-hidden border-b border-[#eedcc6] bg-[#fffefa] md:bg-[#fffdf9]">
-        <div className="absolute inset-x-0 top-0 -z-10 h-52 bg-[radial-gradient(circle_at_78%_20%,rgba(221,166,77,.15),transparent_56%)] md:hidden" />
+      <section className="relative isolate overflow-hidden border-b border-[#eedcc6] bg-[#fffefa] min-[769px]:bg-[#fffdf9]">
+        <div className="absolute inset-x-0 top-0 -z-10 h-52 bg-[radial-gradient(circle_at_78%_20%,rgba(221,166,77,.15),transparent_56%)] min-[769px]:hidden" />
 
-        <div className="mx-auto grid min-h-[650px] max-w-[1180px] items-center gap-6 px-4 py-8 md:min-h-[625px] md:grid-cols-[1.08fr_.92fr] md:px-8 md:py-10">
-          <div className="relative order-1 flex min-h-[320px] items-center justify-center md:order-2 md:min-h-[560px]">
+        <div className="mx-auto flex flex-col min-[769px]:grid min-[769px]:min-h-[625px] min-[769px]:max-w-[1180px] min-[769px]:items-center min-[769px]:gap-6 px-4 py-6 min-[769px]:grid-cols-[1.08fr_.92fr] min-[769px]:px-8 min-[769px]:py-10">
+          <div className="relative order-6 flex min-h-[280px] items-center justify-center my-2 max-[768px]:order-6 min-[769px]:order-2 min-[769px]:min-h-[560px]">
             <div className="absolute inset-x-[8%] bottom-[4%] h-[27%] rounded-[50%] bg-[#d9b98b]/35 blur-2xl" />
             <img
               src="/media/product-open.webp"
               alt="كريم AL HURRA بالأركان وفيتامين E مع الغطاء الذهبي وزهور بيضاء"
-              className="relative z-10 h-auto w-[92%] max-w-[680px] object-contain drop-shadow-[0_24px_24px_rgba(80,44,8,.16)] sm:w-full"
+              className="relative z-10 h-auto w-[92%] max-w-[540px] min-[769px]:max-w-[680px] object-contain drop-shadow-[0_24px_24px_rgba(80,44,8,.16)] min-[769px]:w-full"
               width="1536"
               height="1024"
               fetchPriority="high"
@@ -316,23 +316,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="order-2 text-center md:order-1 md:text-right">
+          <div className="max-[768px]:contents text-center min-[769px]:block min-[769px]:order-1 min-[769px]:text-right">
             <img
               src="/media/logo-alhurra.webp"
               alt="شعار AL HURRA"
-              className="mx-auto mb-3 h-[105px] w-[175px] object-contain md:mx-auto md:mb-4 md:h-[110px] md:w-[180px]"
+              className="mx-auto mb-2 h-[100px] w-[168px] object-contain max-[768px]:order-1 min-[769px]:mx-auto min-[769px]:mb-4 min-[769px]:h-[110px] min-[769px]:w-[180px]"
               width="1536"
               height="1024"
             />
 
-            <p className="text-xl font-bold text-[#33241c] sm:text-2xl">
+            <p className="text-xl font-bold text-[#33241c] sm:text-2xl max-[768px]:order-2">
               سر الجمال الطبيعي
             </p>
-            <h1 className="mt-2 text-[2.3rem] font-black leading-[1.22] tracking-[-.035em] text-[#bd7007] sm:text-[3.25rem] lg:text-[3.55rem]">
+            <h1 className="mt-1 text-[2.2rem] font-black leading-[1.22] tracking-[-.035em] text-[#bd7007] sm:text-[3.25rem] min-[769px]:text-[3.55rem] max-[768px]:order-3">
               لبشرة مشرقة وشابة
             </h1>
 
-            <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-lg font-semibold text-[#30221b] lg:justify-start">
+            <div className="mt-2 flex flex-wrap items-center justify-center gap-2 text-lg font-semibold text-[#30221b] min-[769px]:justify-start max-[768px]:order-4">
               <span>كريم الأركان وفيتامين E</span>
               <span
                 className="rounded-md bg-gradient-to-b from-[#da9429] to-[#b96d05] px-2.5 py-1 text-sm font-extrabold tracking-wide text-white"
@@ -342,7 +342,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="mt-7 grid grid-cols-2 gap-x-2 gap-y-5 sm:grid-cols-4">
+            <div className="mt-5 grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-4 max-[768px]:order-5">
               {heroBenefits.map(({ label, icon: Icon }) => (
                 <div
                   key={label}
@@ -362,13 +362,13 @@ export default function Home() {
             <Button
               type="button"
               onClick={scrollToOrder}
-              className="mt-7 h-14 w-full max-w-[390px] rounded-lg bg-gradient-to-b from-[#dfa03b] via-[#ca800f] to-[#b96b04] px-8 text-xl font-black text-white shadow-[0_10px_24px_rgba(176,100,4,.2)] transition hover:brightness-105 sm:text-2xl"
+              className="mt-6 h-14 w-full max-w-[390px] rounded-lg bg-gradient-to-b from-[#dfa03b] via-[#ca800f] to-[#b96b04] px-8 text-xl font-black text-white shadow-[0_10px_24px_rgba(176,100,4,.2)] transition hover:brightness-105 sm:text-2xl max-[768px]:order-7"
             >
               <ShoppingCart className="size-6" aria-hidden="true" />
               اطلب الآن
             </Button>
 
-            <div className="mx-auto mt-5 flex max-w-[540px] flex-wrap justify-center gap-x-5 gap-y-3 lg:mx-0 lg:justify-start">
+            <div className="mx-auto mt-4 flex max-w-[540px] flex-wrap justify-center gap-x-5 gap-y-3 min-[769px]:mx-0 min-[769px]:justify-start max-[768px]:order-8">
               {heroTrustItems.map(({ label, icon: Icon }) => (
                 <div
                   key={label}
