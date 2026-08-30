@@ -892,9 +892,9 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1180px] gap-8 px-5 py-9 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
           <div className="flex flex-col items-center text-center sm:items-start sm:text-right">
             <img
-              src="/media/logo-alhurra.webp"
+              src="/media/logo-footer.png"
               alt="شعار AL HURRA"
-              className="mx-auto mb-3 h-20 w-auto object-contain sm:h-24"
+              className="mx-auto mb-3 h-24 w-auto object-contain sm:h-28"
               width="1536"
               height="1024"
               loading="lazy"
