@@ -288,8 +288,8 @@ export default function Home() {
 
   return (
     <main className="overflow-x-clip pb-20 md:pb-0">
-      <section className="relative isolate overflow-hidden border-b border-[#eedcc6] bg-[#fffefa]">
-        <div className="absolute inset-x-0 top-0 -z-10 h-52 bg-[radial-gradient(circle_at_78%_20%,rgba(221,166,77,.15),transparent_56%)]" />
+      <section className="relative isolate overflow-hidden border-b border-[#eedcc6] bg-[#fffefa] md:bg-[#fffdf9]">
+        <div className="absolute inset-x-0 top-0 -z-10 h-52 bg-[radial-gradient(circle_at_78%_20%,rgba(221,166,77,.15),transparent_56%)] md:hidden" />
 
         <div className="mx-auto grid min-h-[650px] max-w-[1180px] items-center gap-6 px-4 py-8 md:min-h-[625px] md:grid-cols-[1.08fr_.92fr] md:px-8 md:py-10">
           <div className="relative order-1 flex min-h-[320px] items-center justify-center md:order-2 md:min-h-[560px]">
@@ -320,7 +320,7 @@ export default function Home() {
             <img
               src="/media/logo-alhurra.webp"
               alt="شعار AL HURRA"
-              className="mx-auto mb-3 h-[105px] w-[175px] object-contain md:mx-0 md:mb-4 md:mr-4"
+              className="mx-auto mb-3 h-[105px] w-[175px] object-contain md:mx-auto md:mb-4 md:h-[110px] md:w-[180px]"
               width="1536"
               height="1024"
             />
