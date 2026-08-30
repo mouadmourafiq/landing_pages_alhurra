@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-cairo);
+  --font-heading: var(--font-cairo);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+:root {
+  --background: #fffdf9;
+  --foreground: #2d1e17;
+  --card: #ffffff;
+  --card-foreground: #2d1e17;
+  --primary: #c47a0a;
+  --primary-foreground: #ffffff;
+  --secondary: #fcf4e8;
+  --secondary-foreground: #6f410c;
+  --muted: #f8f2e9;
+  --muted-foreground: #776c64;
+  --accent: #f6e7cf;
+  --accent-foreground: #8c5106;
+  --destructive: #b42318;
+  --border: #ecdac1;
+  --input: #e8d7c2;
+  --ring: #c47a0a;
+  --radius: 0.7rem;
+}
+
+.dark {
+  --background: #2c2018;
+  --foreground: #fffaf1;
+  --card: #38281e;
+  --card-foreground: #fffaf1;
+  --primary: #e2a548;
+  --primary-foreground: #2c2018;
+  --secondary: #493527;
+  --secondary-foreground: #fff5e3;
+  --muted: #3f2e23;
+  --muted-foreground: #d7c7b8;
+  --accent: #59402c;
+  --accent-foreground: #ffe9c1;
+  --destructive: #ff897d;
+  --border: #604833;
+  --input: #6b5038;
+  --ring: #e2a548;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-width: 320px;
+    font-family: var(--font-cairo), Tahoma, Arial, sans-serif;
+    background-image:
+      radial-gradient(circle at 80% 2%, rgb(234 203 153 / 16%), transparent 26rem),
+      linear-gradient(180deg, #fffefa 0%, #fffdf9 100%);
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+::selection {
+  color: #2d1e17;
+  background: #ecd09d;
+}
+
+.conversion-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .conversion-grid {
+    direction: ltr;
+    grid-template-columns: 1.27fr 0.93fr;
+    grid-template-areas:
+      'problems why'
+      'offer why';
+  }
+
+  .conversion-grid > * {
+    direction: rtl;
+  }
+
+  .problems-panel {
+    grid-area: problems;
+  }
+
+  .why-panel {
+    grid-area: why;
+  }
+
+  .offer-panel {
+    grid-area: offer;
+  }
+}
