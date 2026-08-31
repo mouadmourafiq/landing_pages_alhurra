@@ -58,7 +58,7 @@ export function OrderForm({
         يرجى ملء الاستمارة التالية بدقة
       </p>
 
-      <div className="mt-4 flex items-center justify-between rounded-lg bg-[#fcf4e8] px-4 py-3">
+      <div className="mt-4 flex items-center justify-between gap-3 rounded-lg bg-[#fcf4e8] px-4 py-3">
         <div>
           <span className="block text-[10px] font-bold text-[#78501f]">
             العرض المختار
@@ -67,9 +67,22 @@ export function OrderForm({
             {selectedOffer.name}
           </strong>
         </div>
-        <strong className="text-xl font-black text-[#b96c05]" dir="ltr">
-          {totalPayable} DH
-        </strong>
+        <div className="text-left text-xs leading-5">
+          <span className="block text-[11px] text-[#74665c]">
+            ثمن المنتج: <span dir="ltr">{selectedOffer.price} DH</span>
+          </span>
+          <span className="block text-[11px] text-[#74665c]">
+            التوصيل:{' '}
+            {selectedOffer.deliveryFee && selectedOffer.deliveryFee > 0 ? (
+              <span dir="ltr">{selectedOffer.deliveryFee} DH</span>
+            ) : (
+              'مشمول'
+            )}
+          </span>
+          <strong className="block text-sm sm:text-base font-black text-[#b96c05]">
+            المجموع: <span dir="ltr">{totalPayable} DH</span>
+          </strong>
+        </div>
       </div>
 
       <form className="mt-5" onSubmit={onSubmit} noValidate>
