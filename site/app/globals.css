@@ -132,3 +132,188 @@
     grid-area: offer;
   }
 }
+
+/* ==================================================
+   GOMMAGE NILLA PRODUCT THEME OVERRIDES (SCOPED ONLY)
+   ================================================== */
+main[data-product="gommage-nilla"] {
+  background-color: #FFFCF7;
+
+  /* Headings & Brand Titles */
+  h1, h2, h3,
+  .text-\[\#bd7007\],
+  .text-\[\#35251d\],
+  .text-\[\#382820\],
+  .text-\[\#3c2b22\],
+  .text-\[\#3a291f\],
+  .text-\[\#3a2a22\],
+  .text-\[\#33241c\],
+  .text-\[\#2d1e17\] {
+    color: #082B5C;
+  }
+
+  /* Decorative Heading Lines */
+  .bg-gradient-to-l,
+  .bg-gradient-to-r {
+    --tw-gradient-from: #D99A2B;
+  }
+
+  /* Section Borders & Card Borders */
+  .border-\[\#eedcc6\],
+  .border-\[\#ecd9c2\],
+  .border-\[\#ecd7bc\],
+  .border-\[\#ead8c0\],
+  .border-\[\#ead9c2\],
+  .border-\[\#e8d6bf\],
+  .border-\[\#e4d2bb\] {
+    border-color: #E8D5B8;
+  }
+
+  /* Section Backgrounds (Offer, Cards, Highlights) */
+  .offer-panel,
+  .bg-\[\#fffefa\],
+  .bg-\[\#fcf4e8\],
+  .bg-\[\#fffdf9\],
+  .bg-\[\#fff7e8\] {
+    background-color: #FFF8ED;
+  }
+
+  /* Primary CTA Buttons (Hero, Order Form, Sticky CTA) */
+  button.bg-gradient-to-b.from-\[\#dfa03b\],
+  button.bg-gradient-to-b.from-\[\#49bc57\],
+  button.bg-gradient-to-b.from-\[\#d99b32\],
+  .bg-gradient-to-b.from-\[\#dfa03b\],
+  .bg-gradient-to-b.from-\[\#49bc57\],
+  .bg-gradient-to-b.from-\[\#d99b32\] {
+    background: linear-gradient(to bottom, #082B5C, #061F43) !important;
+    border: 1px solid #D99A2B;
+    color: #FFFFFF !important;
+    box-shadow: 0 10px 24px rgba(8, 43, 92, 0.25) !important;
+  }
+
+  button.bg-gradient-to-b.from-\[\#dfa03b\]:hover,
+  button.bg-gradient-to-b.from-\[\#49bc57\]:hover,
+  button.bg-gradient-to-b.from-\[\#d99b32\]:hover {
+    background: #061F43 !important;
+  }
+
+  /* Icons & Accent Colors */
+  .text-\[\#cb7b0a\],
+  .text-\[\#c77b0a\],
+  .text-\[\#c67809\],
+  .text-\[\#c77909\],
+  .text-\[\#ca7b0a\],
+  .text-\[\#c97a08\],
+  .text-\[\#b96c05\],
+  .text-\[\#a76106\],
+  .text-\[\#6e5e53\],
+  .text-\[\#d99834\],
+  .text-\[\#875312\],
+  .text-\[\#8e590f\] {
+    color: #D99A2B;
+  }
+
+  /* Icon Circle Badges */
+  .bg-\[\#c77a09\] {
+    background-color: #082B5C;
+  }
+
+  .border-\[\#d79029\] {
+    border-color: #D99A2B;
+  }
+
+  /* Body, Descriptions & Informational Text to Nila Navy #082B5C */
+  p, li, label,
+  .text-\[\#3d3028\],
+  .text-\[\#30221b\],
+  .text-\[\#49372d\],
+  .text-\[\#4d4037\],
+  .text-\[\#33241c\],
+  .text-\[\#261508\],
+  .text-\[\#5e3909\],
+  .text-gray-600,
+  .text-gray-700,
+  .text-gray-800,
+  .text-gray-900 {
+    color: #082B5C;
+  }
+
+  /* Guarantee / Satisfaction Hero 100% Badge (Cosmetic Seal) */
+  .rotate-\[-7deg\].border-\[\#e7a42c\],
+  .rotate-\[-7deg\].bg-\[\#f6c65a\] {
+    border-color: #D99A2B !important;
+    background-color: #FFF8ED !important;
+    box-shadow: 0 8px 24px rgba(8, 43, 92, 0.15) !important;
+  }
+
+  .rotate-\[-7deg\].border-\[\#e7a42c\]::before {
+    border-color: #082B5C !important;
+  }
+
+  .rotate-\[-7deg\].border-\[\#e7a42c\] span,
+  .rotate-\[-7deg\].border-\[\#e7a42c\] strong {
+    color: #082B5C !important;
+  }
+
+  /* Savings Pills & Badges */
+  .bg-gradient-to-b.from-\[\#d99b32\],
+  .bg-gradient-to-b.from-\[\#da9429\] {
+    background: linear-gradient(to bottom, #D99A2B, #B86A03) !important;
+    color: #FFFFFF;
+  }
+
+  /* Prices & Old Prices */
+  strong.text-\[\#2d1e17\],
+  strong.text-\[\#b96c05\] {
+    color: #082B5C;
+  }
+
+  .line-through.decoration-\[\#963a2f\],
+  .line-through.decoration-\[\#87382c\] {
+    text-decoration-color: #8B8177;
+    color: #8B8177;
+  }
+
+  /* Selected Card State in PacksSection */
+  .peer:checked ~ div {
+    border-color: #D99A2B !important;
+    background-color: #FFFFFF !important;
+    box-shadow: 0 14px 30px rgba(217, 154, 43, 0.18) !important;
+  }
+
+  /* Form Input Focus */
+  input:focus-visible,
+  textarea:focus-visible {
+    border-color: #D99A2B !important;
+  }
+
+  /* Footer Styling (Deep Nila Navy) */
+  footer {
+    background-color: #061F43 !important;
+    color: #F5F1EA !important;
+  }
+
+  footer h2 {
+    color: #FFFFFF !important;
+  }
+
+  footer p,
+  footer a,
+  footer nav a {
+    color: #F5F1EA !important;
+  }
+
+  footer a:hover {
+    color: #D99A2B !important;
+  }
+
+  footer svg {
+    color: #D99A2B !important;
+  }
+
+  footer .border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #E8D5B8 !important;
+  }
+}
+
